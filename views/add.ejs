@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/add.css' />
+  <title>작물 상태 추가</title>
+</head>
+<body>
+
+  <div class="container">
+    <h2>작물 상태 추가</h2>
+
+    <form action="/crops/<%=name%>/add" method="POST">
+      <div class="input-group">
+        <label for="height">작물 높이 (cm)</label>
+        <input type="number" name="height" id="height" placeholder="작물 높이" required>
+      </div>
+
+      <div class="input-group">
+        <label for="temperature">기온 (°C)</label>
+        <input type="number" name="temperature" id="temperature" placeholder="기온" required>
+      </div>
+
+      <div class="input-group">
+        <label for="soilMoisture">토양 수분 (%)</label>
+        <input type="number" name="soilMoisture" id="soilMoisture" placeholder="토양 수분" required>
+      </div>
+
+      <button type="submit" class="submit-btn">추가하기</button>
+    </form>
+  </div>
+
+</body>
+</html>

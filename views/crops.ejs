@@ -3,28 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>데이터 변화 그래프</title>
+  <title>작물 상태 변화 (항목별)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1000px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .chart-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .chart-item {
+      background-color: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      max-width: 30%;
+      min-width: 250px;
+      box-sizing: border-box;
+    }
+
+    .chart-item canvas {
+      width: 100%;
+      height: 180px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .button-group button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 800px) {
+      .chart-item {
+        max-width: 100%;
+        min-width: 100%;
+      }
+
+      .chart-row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
-    <h2>데이터 변화 그래프</h2>
+    <h2>📊 작물 상태 변화 (날짜별)</h2>
 
     <div class="chart-row">
-      <div class="chart-container">
-        <h3>높이 (cm)</h3>
+      <div class="chart-item">
         <canvas id="heightChart"></canvas>
       </div>
-
-      <div class="chart-container">
-        <h3>기온 (°C)</h3>
+      <div class="chart-item">
         <canvas id="temperatureChart"></canvas>
       </div>
-
-      <div class="chart-container">
-        <h3>토양 수분 (%)</h3>
-        <canvas id="soilMoistureChart"></canvas>
+      <div class="chart-item">
+        <canvas id="moistureChart"></canvas>
       </div>
     </div>
 
@@ -34,126 +114,79 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
-</body>
-<script>
+  <script>
     // 샘플 데이터
-const data = [
-  { date: '20250509', height: '25', temperature: '23', soilMoisture: '60' },
-  { date: '20250510', height: '35', temperature: '33', soilMoisture: '30' },
-  { date: '20250511', height: '30', temperature: '32', soilMoisture: '55' },
-  { date: '20250512', height: '28', temperature: '30', soilMoisture: '50' },
-  { date: '20250513', height: '40', temperature: '35', soilMoisture: '65' }
-];
+    const cropData = <%- JSON.stringify(data) %>;
+    console.log(cropData);
 
-const dates = data.map(item => item.date);
-const heights = data.map(item => parseInt(item.height));
-const temperatures = data.map(item => parseInt(item.temperature));
-const soilMoistures = data.map(item => parseInt(item.soilMoisture));
-
-const chartOptions = {
-  type: 'line',
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: false
-      }
-    },
-    scales: {
-      x: {
-        ticks: {
-          font: {
-            size: 10
-          }
-        }
-      },
-      y: {
-        beginAtZero: true,
-        ticks: {
-          stepSize: 10
-        }
-      }
-    }
-  }
-};
-
-// 높이 차트
-new Chart(document.getElementById('heightChart').getContext('2d'), {
-  ...chartOptions,
-  data: {
-    labels: dates,
-    datasets: [{
-      label: 'Height (cm)',
-      data: heights,
-      borderColor: '#007bff',
-      backgroundColor: '#007bff33',
-      borderWidth: 2,
-      tension: 0.3,
-      pointRadius: 3
-    }]
-  }
-});
-
-// 기온 차트
-new Chart(document.getElementById('temperatureChart').getContext('2d'), {
-  ...chartOptions,
-  data: {
-    labels: dates,
-    datasets: [{
-      label: 'Temperature (°C)',
-      data: temperatures,
-      borderColor: '#ff5733',
-      backgroundColor: '#ff573333',
-      borderWidth: 2,
-      tension: 0.3,
-      pointRadius: 3
-    }]
-  }
-});
-
-// 토양 수분 차트
-new Chart(document.getElementById('soilMoistureChart').getContext('2d'), {
-  ...chartOptions,
-  data: {
-    labels: dates,
-    datasets: [{
-      label: 'Soil Moisture (%)',
-      data: soilMoistures,
-      borderColor: '#28a745',
-      backgroundColor: '#28a74533',
-      borderWidth: 2,
-      tension: 0.3,
-      pointRadius: 3
-    }]
-  }
-});
-
-// 홈으로 이동
-function goHome() {
-  window.location.href = "/";
-}
-
-// 데이터 추가
-function addData() {
-  const newDate = prompt("날짜 (YYYYMMDD):");
-  const newHeight = prompt("높이 (cm):");
-  const newTemp = prompt("기온 (°C):");
-  const newSoil = prompt("토양 수분 (%):");
-
-  if (newDate && newHeight && newTemp && newSoil) {
-    data.push({
-      date: newDate,
-      height: newHeight,
-      temperature: newTemp,
-      soilMoisture: newSoil
+    // 날짜 라벨
+    const labels = cropData.map(item => {
+      return `${item.date.slice(0, 4)}-${item.date.slice(4, 6)}-${item.date.slice(6, 8)}`;
     });
 
-    alert("데이터가 추가되었습니다. 새로고침하세요.");
-  }
-}
+    // 데이터 추출
+    const heights = cropData.map(item => Number(item.height));
+    const temperatures = cropData.map(item => Number(item.temperature));
+    const moistures = cropData.map(item => Number(item.soilMoisture));
 
-</script>
+    // 차트 생성 함수
+    function createChart(canvasId, label, data, color) {
+      new Chart(document.getElementById(canvasId), {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: label,
+            data: data,
+            borderColor: color,
+            backgroundColor: color + '33',
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: true },
+            tooltip: {
+              backgroundColor: '#333',
+              titleFont: { size: 14, weight: 'bold' },
+              bodyFont: { size: 12 },
+              padding: 10
+            }
+          },
+          scales: {
+            x: {
+              ticks: { font: { size: 10 } },
+              title: { display: true, text: '날짜' }
+            },
+            y: {
+              beginAtZero: true,
+              ticks: { stepSize: 10, font: { size: 12 } },
+              title: { display: true, text: label }
+            }
+          }
+        }
+      });
+    }
+
+    // 그래프 생성
+    createChart("heightChart", "높이 (cm)", heights, "#4CAF50");
+    createChart("temperatureChart", "기온 (°C)", temperatures, "#2196F3");
+    createChart("moistureChart", "토양 수분 (%)", moistures, "#FF9800");
+
+    // 홈으로 이동
+    function goHome() {
+      window.location.href = "/main";
+    }
+
+    // 데이터 추가
+    function addData() {
+      window.location.href = "./<%- name %>/add";
+    }
+  </script>
+</body>
 </html>

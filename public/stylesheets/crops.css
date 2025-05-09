@@ -12,7 +12,7 @@ body, html {
 
 .container {
   width: 95%;
-  max-width: 1000px;
+  max-width: 800px;
   background-color: #ffffff;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ body, html {
 h2 {
   font-size: 20px;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .chart-row {
@@ -32,6 +32,7 @@ h2 {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .chart-container {
@@ -40,19 +41,20 @@ h2 {
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   flex: 1;
-  max-width: 300px;
-  height: 200px;  /* 고정된 높이 */
+  max-width: 180px; /* 작게 줄이기 */
+  height: 150px;
+  box-sizing: border-box;
 }
 
 .chart-container h3 {
-  font-size: 14px;
+  font-size: 12px;
   color: #555;
   margin-bottom: 5px;
 }
 
 .chart-container canvas {
   width: 100%;
-  height: 140px;
+  height: 100px; /* 고정된 높이 */
 }
 
 .button-group {
@@ -74,4 +76,16 @@ h2 {
 
 .button-group button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .chart-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart-container {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 }

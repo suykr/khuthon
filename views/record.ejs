@@ -37,12 +37,14 @@
       </div>
     </form>
 
-    <div class="record-list" id="recordList">
-      <h3>기록된 데이터</h3>
-      <ul id="recordItems"></ul>
+    <div class="button-group">
+        <button type="submit" onclick="goHome()">홈으로</button>
     </div>
   </div>
-
-  <script src="scripts/script.js"></script>
 </body>
+<script>
+  function goHome() {
+  window.location.href = "/main";
+}
+</script>
 </html>
