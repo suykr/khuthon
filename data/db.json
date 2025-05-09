@@ -23,6 +23,32 @@
       "height": "22",
       "temperature": "22",
       "soilMoisture": "22"
+    },
+    {
+      "date": "20250510",
+      "height": "243",
+      "temperature": "23",
+      "soilMoisture": "4"
+    }
+  ],
+  "고구마": [
+    {
+      "date": "20250510",
+      "height": "1",
+      "temperature": "20",
+      "soilMoisture": "32"
+    },
+    {
+      "date": "20250510",
+      "height": "2",
+      "temperature": "33",
+      "soilMoisture": "43"
+    },
+    {
+      "date": "20250510",
+      "height": "23",
+      "temperature": "24",
+      "soilMoisture": "24"
     }
   ]
 }
