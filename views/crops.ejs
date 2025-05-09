@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>데이터 변화 그래프</title>
+</head>
+<body>
+
+  <div class="container">
+    <h2>데이터 변화 그래프</h2>
+
+    <div class="chart-row">
+      <div class="chart-container">
+        <h3>높이 (cm)</h3>
+        <canvas id="heightChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h3>기온 (°C)</h3>
+        <canvas id="temperatureChart"></canvas>
+      </div>
+
+      <div class="chart-container">
+        <h3>토양 수분 (%)</h3>
+        <canvas id="soilMoistureChart"></canvas>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button onclick="goHome()">홈으로</button>
+      <button onclick="addData()">데이터 추가</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+<script>
+    // 샘플 데이터
+const data = [
+  { date: '20250509', height: '25', temperature: '23', soilMoisture: '60' },
+  { date: '20250510', height: '35', temperature: '33', soilMoisture: '30' },
+  { date: '20250511', height: '30', temperature: '32', soilMoisture: '55' },
+  { date: '20250512', height: '28', temperature: '30', soilMoisture: '50' },
+  { date: '20250513', height: '40', temperature: '35', soilMoisture: '65' }
+];
+
+const dates = data.map(item => item.date);
+const heights = data.map(item => parseInt(item.height));
+const temperatures = data.map(item => parseInt(item.temperature));
+const soilMoistures = data.map(item => parseInt(item.soilMoisture));
+
+const chartOptions = {
+  type: 'line',
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: {
+            size: 10
+          }
+        }
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 10
+        }
+      }
+    }
+  }
+};
+
+// 높이 차트
+new Chart(document.getElementById('heightChart').getContext('2d'), {
+  ...chartOptions,
+  data: {
+    labels: dates,
+    datasets: [{
+      label: 'Height (cm)',
+      data: heights,
+      borderColor: '#007bff',
+      backgroundColor: '#007bff33',
+      borderWidth: 2,
+      tension: 0.3,
+      pointRadius: 3
+    }]
+  }
+});
+
+// 기온 차트
+new Chart(document.getElementById('temperatureChart').getContext('2d'), {
+  ...chartOptions,
+  data: {
+    labels: dates,
+    datasets: [{
+      label: 'Temperature (°C)',
+      data: temperatures,
+      borderColor: '#ff5733',
+      backgroundColor: '#ff573333',
+      borderWidth: 2,
+      tension: 0.3,
+      pointRadius: 3
+    }]
+  }
+});
+
+// 토양 수분 차트
+new Chart(document.getElementById('soilMoistureChart').getContext('2d'), {
+  ...chartOptions,
+  data: {
+    labels: dates,
+    datasets: [{
+      label: 'Soil Moisture (%)',
+      data: soilMoistures,
+      borderColor: '#28a745',
+      backgroundColor: '#28a74533',
+      borderWidth: 2,
+      tension: 0.3,
+      pointRadius: 3
+    }]
+  }
+});
+
+// 홈으로 이동
+function goHome() {
+  window.location.href = "/";
+}
+
+// 데이터 추가
+function addData() {
+  const newDate = prompt("날짜 (YYYYMMDD):");
+  const newHeight = prompt("높이 (cm):");
+  const newTemp = prompt("기온 (°C):");
+  const newSoil = prompt("토양 수분 (%):");
+
+  if (newDate && newHeight && newTemp && newSoil) {
+    data.push({
+      date: newDate,
+      height: newHeight,
+      temperature: newTemp,
+      soilMoisture: newSoil
+    });
+
+    alert("데이터가 추가되었습니다. 새로고침하세요.");
+  }
+}
+
+</script>
+</html>

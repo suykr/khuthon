@@ -8,6 +8,7 @@ var expressSession = require('express-session');
 var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var recordRouter = require('./routes/record');
+var cropsRouter = require('./routes/crops');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use(
 app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/record', recordRouter);
+app.use('/crops', cropsRouter);
 
 app.get('/', (req, res)=>{
   if(req.session.user){

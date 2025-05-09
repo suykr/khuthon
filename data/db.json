@@ -1,17 +1,58 @@
 {
-  "토마토": {
-    "height": "20",
-    "temperature": "21",
-    "soilMoisture": "22"
-  },
-  "당근": {
-    "height": "10",
-    "temperature": "11",
-    "soilMoisture": "12"
-  },
-  "안녕": {
-    "height": "30",
-    "temperature": "31",
-    "soilMoisture": "32"
-  }
+  "33": [
+    {
+      "date": "20250509",
+      "height": "1",
+      "temperature": "30",
+      "soilMoisture": "35"
+    },
+    {
+      "date": "20250510",
+      "height": "3",
+      "temperature": "31",
+      "soilMoisture": "32"
+    },
+    {
+      "date": "20250511",
+      "height": "4",
+      "temperature": "32",
+      "soilMoisture": "39"
+    },
+    {
+      "date": "20250512",
+      "height": "6",
+      "temperature": "33",
+      "soilMoisture": "33"
+    },
+    {
+      "date": "20250513",
+      "height": "8",
+      "temperature": "34",
+      "soilMoisture": "36"
+    }
+  ],
+  "토마토": [
+    {
+      "date": "1",
+      "height": "20",
+      "temperature": "21",
+      "soilMoisture": "22"
+    }
+  ],
+  "당근": [
+    {
+      "date": "1",
+      "height": "10",
+      "temperature": "11",
+      "soilMoisture": "12"
+    }
+  ],
+  "안녕": [
+    {
+      "date": "1",
+      "height": "30",
+      "temperature": "31",
+      "soilMoisture": "32"
+    }
+  ]
 }
