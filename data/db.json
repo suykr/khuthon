@@ -1,160 +1,80 @@
 {
-  "당근": [
+  "쌀": [
     {
       "date": "20250501",
-      "height": "10",
-      "temperature": "21",
-      "soilMoisture": "35"
-    },
-    {
-      "date": "20250505",
-      "height": "12",
-      "temperature": "23",
-      "soilMoisture": "40"
-    },
-    {
-      "date": "20250510",
-      "height": "15",
-      "temperature": "25",
-      "soilMoisture": "38"
-    },
-    {
-      "date": "20250515",
-      "height": "18",
-      "temperature": "26",
-      "soilMoisture": "42"
-    },
-    {
-      "date": "20250510",
-      "height": "232",
-      "temperature": "232",
-      "soilMoisture": "323"
-    }
-  ],
-  "고구마": [
-    {
-      "date": "20250501",
-      "height": "5",
-      "temperature": "20",
-      "soilMoisture": "33"
-    },
-    {
-      "date": "20250505",
-      "height": "7",
-      "temperature": "22",
-      "soilMoisture": "36"
-    },
-    {
-      "date": "20250510",
-      "height": "10",
-      "temperature": "24",
-      "soilMoisture": "39"
-    },
-    {
-      "date": "20250515",
-      "height": "13",
-      "temperature": "26",
-      "soilMoisture": "41"
-    },
-    {
-      "date": "20250510",
       "height": "32",
-      "temperature": "23",
-      "soilMoisture": "33"
+      "temperature": "26",
+      "soilMoisture": "65"
     },
     {
-      "date": "20250510",
-      "height": "3",
-      "temperature": "2",
-      "soilMoisture": "3"
+      "date": "20250502",
+      "height": "35",
+      "temperature": "28",
+      "soilMoisture": "70"
     },
     {
-      "date": "20250510",
-      "height": "3",
-      "temperature": "2",
-      "soilMoisture": "3"
+      "date": "20250503",
+      "height": "38",
+      "temperature": "27",
+      "soilMoisture": "68"
+    },
+    {
+      "date": "20250504",
+      "height": "42",
+      "temperature": "29",
+      "soilMoisture": "73"
     }
   ],
-  "토마토": [
+  "옥수수": [
     {
       "date": "20250501",
-      "height": "15",
-      "temperature": "24",
-      "soilMoisture": "45"
+      "height": "55",
+      "temperature": "30",
+      "soilMoisture": "60"
     },
     {
-      "date": "20250505",
-      "height": "18",
-      "temperature": "26",
-      "soilMoisture": "47"
+      "date": "20250502",
+      "height": "58",
+      "temperature": "31",
+      "soilMoisture": "62"
     },
     {
-      "date": "20250510",
-      "height": "22",
-      "temperature": "27",
-      "soilMoisture": "50"
+      "date": "20250503",
+      "height": "63",
+      "temperature": "30",
+      "soilMoisture": "65"
     },
     {
-      "date": "20250515",
-      "height": "26",
-      "temperature": "29",
-      "soilMoisture": "53"
-    },
-    {
-      "date": "20250510",
-      "height": "70",
-      "temperature": "35",
-      "soilMoisture": "33"
-    },
-    {
-      "date": "20250510",
-      "height": "70",
-      "temperature": "23",
-      "soilMoisture": "33"
-    },
-    {
-      "date": "20250510",
-      "height": "2",
-      "temperature": "3",
-      "soilMoisture": "4"
-    },
-    {
-      "date": "20250510",
-      "height": "4",
-      "temperature": "67",
-      "soilMoisture": "7"
-    },
-    {
-      "date": "20250510",
-      "height": "232",
-      "temperature": "2323",
-      "soilMoisture": "23"
-    },
-    {
-      "date": "20250510",
-      "height": "134",
-      "temperature": "22",
-      "soilMoisture": "33"
-    },
-    {
-      "date": "20250510",
-      "height": "2",
-      "temperature": "2",
-      "soilMoisture": "2"
-    },
-    {
-      "date": "20250510",
-      "height": "121",
-      "temperature": "121",
-      "soilMoisture": "121"
+      "date": "20250504",
+      "height": "68",
+      "temperature": "32",
+      "soilMoisture": "68"
     }
   ],
-  "고구마 ": [
+  "감자": [
     {
-      "date": "20250510",
-      "height": "21",
-      "temperature": "11",
-      "soilMoisture": "23"
+      "date": "20250501",
+      "height": "18",
+      "temperature": "22",
+      "soilMoisture": "72"
+    },
+    {
+      "date": "20250502",
+      "height": "20",
+      "temperature": "24",
+      "soilMoisture": "74"
+    },
+    {
+      "date": "20250503",
+      "height": "23",
+      "temperature": "25",
+      "soilMoisture": "70"
+    },
+    {
+      "date": "20250504",
+      "height": "25",
+      "temperature": "27",
+      "soilMoisture": "75"
     }
   ]
 }
