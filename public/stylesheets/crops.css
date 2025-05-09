@@ -3,68 +3,61 @@ body, html {
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .container {
   width: 95%;
-  max-width: 800px;
-  background-color: #ffffff;
+  max-width: 1000px;
+  background-color: #fff;
   padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   text-align: center;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .chart-row {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.chart-container {
-  background-color: #f9f9f9;
-  padding: 10px;
+.chart-item {
+  background-color: #fafafa;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   flex: 1;
-  max-width: 180px; /* 작게 줄이기 */
-  height: 150px;
+  max-width: 30%;
+  min-width: 250px;
   box-sizing: border-box;
 }
 
-.chart-container h3 {
-  font-size: 12px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.chart-container canvas {
+.chart-item canvas {
   width: 100%;
-  height: 100px; /* 고정된 높이 */
+  height: 180px;
 }
 
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .button-group button {
-  padding: 8px 16px;
+  padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -78,14 +71,13 @@ h2 {
   background-color: #0056b3;
 }
 
-@media (max-width: 600px) {
-  .chart-row {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 800px) {
+  .chart-item {
+    max-width: 100%;
+    min-width: 100%;
   }
 
-  .chart-container {
-    max-width: 100%;
-    margin-bottom: 10px;
+  .chart-row {
+    flex-direction: column;
   }
 }
