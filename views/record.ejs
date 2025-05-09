@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/record.css' />
+  <title>작물 상태 기록 일지</title>
+</head>
+<body>
+
+  <div class="container">
+    <h2>작물 상태 기록</h2>
+
+    <form method="post" action="/record" id="record-form">
+      <div class="input-group">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="작물 이름" required>
+      </div>
+
+      <div class="input-group">
+        <label for="height">작물 높이 (cm)</label>
+        <input type="number" id="height" name="height" placeholder="작물 높이" required>
+      </div>
+
+      <div class="input-group">
+        <label for="temperature">기온 (°C)</label>
+        <input type="number" id="temperature" name="temperature" placeholder="기온" required>
+      </div>
+
+      <div class="input-group">
+        <label for="soilMoisture">토양 수분 (%)</label>
+        <input type="number" id="soilMoisture" name="soilMoisture" placeholder="토양 수분" required>
+      </div>
+
+      <div class="button-group">
+        <button type="submit">기록하기</button>
+      </div>
+    </form>
+
+    <div class="record-list" id="recordList">
+      <h3>기록된 데이터</h3>
+      <ul id="recordItems"></ul>
+    </div>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

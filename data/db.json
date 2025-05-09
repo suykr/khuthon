@@ -1,0 +1,17 @@
+{
+  "토마토": {
+    "height": 35,
+    "temperature": 24,
+    "soilMoisture": 65
+  },
+  "상추": {
+    "height": 15,
+    "temperature": 22,
+    "soilMoisture": 55
+  },
+  "고구마": {
+    "height": 20,
+    "temperature": 28,
+    "soilMoisture": 70
+  }
+}
