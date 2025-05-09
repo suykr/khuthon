@@ -69,22 +69,27 @@ Khuthon 2025의 주제는 **농업의 기술화**입니다.
 │ │ └── record.js
 │ └── /stylesheets
 │ ├── add.css
+│ ├── check.css
 │ ├── crops.css
 │ ├── login.css
 │ ├── main.css
 │ ├── record.css
 │ └── style.css
 ├── /routes # 라우트 정의 폴더
+│ ├── check.js
 │ ├── crops.js
 │ ├── index.js
 │ ├── login.js
 │ ├── main.js
 │ └── record.js
 ├── /views # EJS 템플릿 폴더
-│ ├── index.ejs
+│ ├── add.ejs
+│ ├── check.ejs
+│ ├── crops.ejs
+│ ├── error.ejs
 │ ├── login.ejs
-│ ├── record.ejs
-│ └── crops.ejs
+│ ├── main.ejs
+│ └── record.ejs
 ├── .gitignore # Git에서 제외할 파일 목록
 ├── app.js # 서버의 메인 엔트리 포인트 파일
 ├── package-lock.json # 종속성 관리 파일

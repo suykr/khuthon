@@ -9,6 +9,7 @@ var loginRouter = require('./routes/login');
 var mainRouter = require('./routes/main');
 var recordRouter = require('./routes/record');
 var cropsRouter = require('./routes/crops');
+var checkRouter = require('./routes/check');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/login', loginRouter);
 app.use('/main', mainRouter);
 app.use('/record', recordRouter);
 app.use('/crops', cropsRouter);
+app.use('/check', checkRouter);
 
 app.get('/', (req, res)=>{
   if(req.session.user){

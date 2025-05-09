@@ -26,6 +26,7 @@
     <div class="button-group">
       <button onclick="goHome()">홈으로</button>
       <button onclick="addData()">데이터 추가</button>
+      <button onclick="goCheck()">check</button>
     </div>
     <footer>
       &copy; 2025 농업 관리 시스템 Team 근면성실
@@ -104,6 +105,10 @@
     // 데이터 추가 패이지로 이동
     function addData() {
       window.location.href = "./<%- name %>/add";
+    }
+
+    function goCheck() {
+      window.location.href = "/check";
     }
   </script>
 </body>

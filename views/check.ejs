@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>작물 이상치 경고 시스템</title>
+  <link rel='stylesheet' href='/stylesheets/check.css'/>
+</head>
+<body>
+
+  <div class="container">
+    <h1>이상치 경고 시스템</h1>
+
+    <form id="cropForm">
+      <label>작물 길이(cm):</label>
+      <input type="number" id="length" placeholder="작물 길이 (cm)">
+
+      <label>기온(°C):</label>
+      <input type="number" id="temp" placeholder="기온 (°C)">
+
+      <label>토양 수분(%):</label>
+      <input type="number" id="moisture" placeholder="토양 수분 (%)">
+
+      <button type="submit">제출</button>
+    </form>
+    <button type="submit" onclick="goHome()">홈으로</button>
+
+    <div id="warning" class="warning"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("cropForm");
+    const warning = document.getElementById("warning");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const length = parseFloat(document.getElementById("length").value);
+      const temp = parseFloat(document.getElementById("temp").value);
+      const moisture = parseFloat(document.getElementById("moisture").value);
+
+      let warnings = [];
+
+      // 이상치 기준
+      if (temp > 35) {
+        warnings.push("🔥 기온이 너무 높습니다 (35°C 초과)");
+      }
+      if (temp < 10) {
+        warnings.push("🔥 기온이 너무 낮습니다 (10°C 미만)");
+      }
+      if (moisture < 20) {
+        warnings.push("💧 토양 수분이 부족합니다 (20% 미만)");
+      }
+      if (moisture > 60) {
+        warnings.push("💧 토양 수분이 과합니다 (60% 초과)");
+      }
+
+      // 결과 표시
+      if (warnings.length > 0) {
+        warning.innerHTML = warnings.join("<br>");
+        warning.className = "warning";
+      } else {
+        warning.innerHTML = "✅ 모든 수치가 정상입니다.";
+        warning.className = "success";
+      }
+    });
+    function goHome() {
+        window.location.href = "/main";
+    }
+  </script>
+
+</body>
+</html>
