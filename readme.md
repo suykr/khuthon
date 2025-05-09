@@ -122,11 +122,83 @@ node ./bin/www
 
 ```json
 {
-  "당근": [
-    { "date": "20250501", "height": "10", "temperature": "21", "soilMoisture": "35" },
-    { "date": "20250505", "height": "12", "temperature": "23", "soilMoisture": "40" },
-    { "date": "20250510", "height": "15", "temperature": "25", "soilMoisture": "38" },
-    { "date": "20250515", "height": "18", "temperature": "26", "soilMoisture": "42" }
+  "쌀": [
+    {
+      "date": "20250501",
+      "height": "32",
+      "temperature": "26",
+      "soilMoisture": "65"
+    },
+    {
+      "date": "20250502",
+      "height": "35",
+      "temperature": "28",
+      "soilMoisture": "70"
+    },
+    {
+      "date": "20250503",
+      "height": "38",
+      "temperature": "27",
+      "soilMoisture": "68"
+    },
+    {
+      "date": "20250504",
+      "height": "42",
+      "temperature": "29",
+      "soilMoisture": "73"
+    }
+  ],
+  "옥수수": [
+    {
+      "date": "20250501",
+      "height": "55",
+      "temperature": "30",
+      "soilMoisture": "60"
+    },
+    {
+      "date": "20250502",
+      "height": "58",
+      "temperature": "31",
+      "soilMoisture": "62"
+    },
+    {
+      "date": "20250503",
+      "height": "63",
+      "temperature": "30",
+      "soilMoisture": "65"
+    },
+    {
+      "date": "20250504",
+      "height": "68",
+      "temperature": "32",
+      "soilMoisture": "68"
+    }
+  ],
+  "감자": [
+    {
+      "date": "20250501",
+      "height": "18",
+      "temperature": "22",
+      "soilMoisture": "72"
+    },
+    {
+      "date": "20250502",
+      "height": "20",
+      "temperature": "24",
+      "soilMoisture": "74"
+    },
+    {
+      "date": "20250503",
+      "height": "23",
+      "temperature": "25",
+      "soilMoisture": "70"
+    },
+    {
+      "date": "20250504",
+      "height": "25",
+      "temperature": "27",
+      "soilMoisture": "75"
+    }
   ]
 }
 ```
