@@ -1,54 +1,160 @@
 {
   "당근": [
     {
-      "date": "20250510",
+      "date": "20250501",
+      "height": "10",
+      "temperature": "21",
+      "soilMoisture": "35"
+    },
+    {
+      "date": "20250505",
       "height": "12",
-      "temperature": "14",
-      "soilMoisture": "22"
+      "temperature": "23",
+      "soilMoisture": "40"
+    },
+    {
+      "date": "20250510",
+      "height": "15",
+      "temperature": "25",
+      "soilMoisture": "38"
+    },
+    {
+      "date": "20250515",
+      "height": "18",
+      "temperature": "26",
+      "soilMoisture": "42"
+    },
+    {
+      "date": "20250510",
+      "height": "232",
+      "temperature": "232",
+      "soilMoisture": "323"
+    }
+  ],
+  "고구마": [
+    {
+      "date": "20250501",
+      "height": "5",
+      "temperature": "20",
+      "soilMoisture": "33"
+    },
+    {
+      "date": "20250505",
+      "height": "7",
+      "temperature": "22",
+      "soilMoisture": "36"
+    },
+    {
+      "date": "20250510",
+      "height": "10",
+      "temperature": "24",
+      "soilMoisture": "39"
+    },
+    {
+      "date": "20250515",
+      "height": "13",
+      "temperature": "26",
+      "soilMoisture": "41"
     },
     {
       "date": "20250510",
       "height": "32",
       "temperature": "23",
-      "soilMoisture": "43"
+      "soilMoisture": "33"
     },
     {
       "date": "20250510",
-      "height": "342",
-      "temperature": "32",
-      "soilMoisture": "43"
+      "height": "3",
+      "temperature": "2",
+      "soilMoisture": "3"
+    },
+    {
+      "date": "20250510",
+      "height": "3",
+      "temperature": "2",
+      "soilMoisture": "3"
+    }
+  ],
+  "토마토": [
+    {
+      "date": "20250501",
+      "height": "15",
+      "temperature": "24",
+      "soilMoisture": "45"
+    },
+    {
+      "date": "20250505",
+      "height": "18",
+      "temperature": "26",
+      "soilMoisture": "47"
     },
     {
       "date": "20250510",
       "height": "22",
-      "temperature": "22",
-      "soilMoisture": "22"
+      "temperature": "27",
+      "soilMoisture": "50"
+    },
+    {
+      "date": "20250515",
+      "height": "26",
+      "temperature": "29",
+      "soilMoisture": "53"
     },
     {
       "date": "20250510",
-      "height": "243",
-      "temperature": "23",
-      "soilMoisture": "4"
-    }
-  ],
-  "고구마": [
+      "height": "70",
+      "temperature": "35",
+      "soilMoisture": "33"
+    },
     {
       "date": "20250510",
-      "height": "1",
-      "temperature": "20",
-      "soilMoisture": "32"
+      "height": "70",
+      "temperature": "23",
+      "soilMoisture": "33"
     },
     {
       "date": "20250510",
       "height": "2",
-      "temperature": "33",
-      "soilMoisture": "43"
+      "temperature": "3",
+      "soilMoisture": "4"
     },
     {
       "date": "20250510",
-      "height": "23",
-      "temperature": "24",
-      "soilMoisture": "24"
+      "height": "4",
+      "temperature": "67",
+      "soilMoisture": "7"
+    },
+    {
+      "date": "20250510",
+      "height": "232",
+      "temperature": "2323",
+      "soilMoisture": "23"
+    },
+    {
+      "date": "20250510",
+      "height": "134",
+      "temperature": "22",
+      "soilMoisture": "33"
+    },
+    {
+      "date": "20250510",
+      "height": "2",
+      "temperature": "2",
+      "soilMoisture": "2"
+    },
+    {
+      "date": "20250510",
+      "height": "121",
+      "temperature": "121",
+      "soilMoisture": "121"
+    }
+  ],
+  "고구마 ": [
+    {
+      "date": "20250510",
+      "height": "21",
+      "temperature": "11",
+      "soilMoisture": "23"
     }
   ]
 }

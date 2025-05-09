@@ -60,7 +60,7 @@ function searchDatabyName(name) {
     // 해당 이름이 존재하면 데이터 배열 반환, 없으면 null 반환
     return data[name] || null;
   } catch (error) {
-    console.error('Error reading data:', error);
+    console.error('데이터 읽는 중에 오류 발생!:', error);
     return null;
   }
 }
@@ -98,9 +98,9 @@ function addData(name, h, t, s) {
 
     // JSON 파일에 저장
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
-    console.log(`데이터가 ${name}에 추가되었습니다.`);
+    console.log(`데이터가 ${name}에 추가되었습니다!`);
   } catch (error) {
-    console.error('데이터 추가 중 오류 발생:', error);
+    console.error('데이터 추가 중 오류 발생!:', error);
   }
 }
 
